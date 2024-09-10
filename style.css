@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    
+}
+
+header {
+    background-image: url("images/page.png");
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    min-height: 100vh; 
+    padding: 80px 100px;
+    
+}
+
+header h1 {
+    position: absolute;
+    width: 50%;
+    top: 30%;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style: none;
+    font-weight: 500;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+    font-size: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 15px;
+    column-gap: 15px;
+}
+
+
+#destinations {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url("/images/destination.png") center/cover;
+     
+}
+
+#destinations h2 {
+    font-size: 50px;
+    text-align: center;
+    padding: 30px;
+}
+
+
+
+.destination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-bottom: 50px;
+}
+
+
+
+.destination img {
+    width: 500px;
+    
+    
+}
+
+.destination h3 {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+
+.destination p {
+    text-align: center;
+    font-size: 20px;
+}
+
+.gallery {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 40px;
+    color: #333;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  .block {
+    background-color: #020C21;
+  }
+.counter-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    align-items: center;
+    
+height: 100vh;
+width: max-content;
+margin: auto;
+padding: 9rem 0;
+}
+
+.counter-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f0f8ff;
+    
+    padding: 16px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    transition: 0.3s all ease-out;
+}
+
+.counter-card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+    transform: scale(1.01);
+}
+
+.counter-icon {
+    font-size: 35px;
+    color: #4b3cfb;
+}
+
+.counter-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-value, .counter-sign, .counter-name {
+    color: #2a2b2c;
+}
+
+.counter-value {
+    font-weight: 600;
+    font-size: 37px;
+}
+
+.counter-sign {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+
+.counter-name {
+    font-size: 17px;
+    line-height: 1.2;
+}
+
+/* #destinations:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: ;
+} */
+
+/* #destinations h2 {
+    z-index: 10;
+    color: #fff;
+} */
+
+
+
+
+footer {
+    background: #006400; 
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+
+.gallery-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label, form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #006400;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #004d00; 
+}
+
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+      width: 85vw;
+    }
+    .container {
+      height: 26vmin;
+      width: 26vmin;
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 968px) {
+    .counter-container {
+        grid-template-columns: repeat(2, 240px);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      width: 90vw;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .container {
+      width: calc(50% - 40px);
+      height: 30vmin;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      gap: 15px;
+    }
+    .container {
+      width: 100%;
+      height: 25vmin;
+      font-size: 8px;
+    }
+  }
