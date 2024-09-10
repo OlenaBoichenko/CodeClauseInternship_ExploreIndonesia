@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore Indonesia</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -20,7 +23,7 @@
   <body>
     <!-- Header -->
     <header>
-      <nav>
+      <nav class="menu">
         <img src="/images/logo.png" />
         <ul>
           <li><a href="#home">Home</a></li>
@@ -30,33 +33,44 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <div class="header-title"> 
-      <h1 >
-        Explore Indonesia
-      </h1>
-    </div>
+      <div class="container_burger">
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+      <div class="header-title">
+        <h1>Explore Indonesia</h1>
+      </div>
     </header>
-
-    <!-- Home Section
-    <section id="home"></section> -->
 
     <!-- About Section -->
     <section id="about">
-        <div class="about"> 
-      <h2>About Indonesia</h2>
-      <p>
-        Indonesia, the world's largest archipelago, is made up of over 17,000 islands, including popular destinations like Bali, Java, and Sumatra. Its landscapes range from active volcanoes to tropical beaches and rainforests. Bali is famous for its beaches, temples, and vibrant culture, while Jakarta, the capital, offers a mix of modern attractions and cultural heritage. Indonesia is home to diverse wildlife, including the Komodo dragon and orangutans, making it a paradise for nature lovers.
-
-
-      </p>
-      <p>
-        Visitors can enjoy outdoor activities such as surfing, diving, and hiking throughout the year due to the tropical climate. The country’s rich cuisine includes must-try dishes like nasi goreng and satay. The best time to visit is during the dry season from May to September. Island-hopping is easy thanks to well-connected domestic flights. From luxury resorts to budget accommodations, Indonesia offers options for every traveler. With its stunning landscapes and welcoming people, Indonesia promises an unforgettable adventure.
-      </p>
-    </div>
+      <div class="about">
+        <h2>About Indonesia</h2>
+        <p>
+          Indonesia, the world's largest archipelago, is made up of over 17,000
+          islands, including popular destinations like Bali, Java, and Sumatra.
+          Its landscapes range from active volcanoes to tropical beaches and
+          rainforests. Bali is famous for its beaches, temples, and vibrant
+          culture, while Jakarta, the capital, offers a mix of modern
+          attractions and cultural heritage. Indonesia is home to diverse
+          wildlife, including the Komodo dragon and orangutans, making it a
+          paradise for nature lovers.
+        </p>
+        <p>
+          Visitors can enjoy outdoor activities such as surfing, diving, and
+          hiking throughout the year due to the tropical climate. The country’s
+          rich cuisine includes must-try dishes like nasi goreng and satay. The
+          best time to visit is during the dry season from May to September.
+          Island-hopping is easy thanks to well-connected domestic flights. From
+          luxury resorts to budget accommodations, Indonesia offers options for
+          every traveler. With its stunning landscapes and welcoming people,
+          Indonesia promises an unforgettable adventure.
+        </p>
+      </div>
     </section>
 
     <!-- Destinations Section -->
-
     <section id="destinations">
       <h2>Top Destinations</h2>
 
@@ -89,7 +103,7 @@
       </div>
     </section>
 
-    <!-- Slider main container -->
+    <!-- Slider container -->
     <section id="gallery">
       <div class="gallery">
         <h2>Gallery</h2>
@@ -128,65 +142,53 @@
       </div>
     </section>
 
-    <!-- Gallery Section
-    <section id="gallery">
-        <h2>Photo Gallery</h2>
-        <div class="gallery-item">
-            <img src="beach.jpg" alt="Beautiful Beach">
-            <p>Serene beaches of Indonesia.</p>
+    <!-- Numbers Section -->
+    <section class="block">
+      <h2>By The Numbers</h2>
+      <div class="counter-container" id="counter-container">
+        <div class="counter-card">
+          <i class="fa-solid fa-trophy counter-icon"></i>
+          <div class="counter-content">
+            <span class="counter-value" data-target="99.9">000</span>
+            <span class="counter-sign">%</span>
+          </div>
+          <span class="counter-name">Success Rate</span>
         </div>
-        <div class="gallery-item">
-            <img src="temple.jpg" alt="Historic Temple">
-            <p>Historic temples and cultural landmarks.</p>
-        </div>
-    </section> -->
 
-    <section class="block" >
-        <h2>By The Numbers</h2>
-        <div class="counter-container" id="counter-container"> 
-      <div class="counter-card">
-        <i class="fa-solid fa-trophy counter-icon"></i>
-        <div class="counter-content">
-          <span class="counter-value" data-target="99.9">000</span>
-          <span class="counter-sign">%</span>
+        <div class="counter-card">
+          <i class="fa-solid fa-users counter-icon"></i>
+          <div class="counter-content">
+            <span class="counter-value" data-target="1200">000</span>
+            <span class="counter-sign">+</span>
+          </div>
+          <span class="counter-name">Happy Clients</span>
         </div>
-        <span class="counter-name">Success Rate</span>
-      </div>
 
-      <div class="counter-card">
-        <i class="fa-solid fa-users counter-icon"></i>
-        <div class="counter-content">
-          <span class="counter-value" data-target="1200">000</span>
-          <span class="counter-sign">+</span>
+        <div class="counter-card">
+          <i class="fa-solid fa-plane counter-icon"></i>
+          <div class="counter-content">
+            <span class="counter-value" data-target="120">000</span>
+            <span class="counter-sign">+</span>
+          </div>
+          <span class="counter-name">Completed Flights</span>
         </div>
-        <span class="counter-name">Happy Clients</span>
-      </div>
 
-      <div class="counter-card">
-        <i class="fa-solid fa-plane counter-icon"></i>
-        <div class="counter-content">
-          <span class="counter-value" data-target="120">000</span>
-          <span class="counter-sign">+</span>
+        <div class="counter-card">
+          <i class="fa-solid fa-person-walking-luggage counter-icon"></i>
+          <div class="counter-content">
+            <span class="counter-value" data-target="252">000</span>
+            <span class="counter-sign">+</span>
+          </div>
+          <span class="counter-name">Successful Tours</span>
         </div>
-        <span class="counter-name">Completed Flights</span>
       </div>
-
-      <div class="counter-card"> 
-        <i class="fa-solid fa-person-walking-luggage counter-icon"></i>
-        <div class="counter-content">
-          <span class="counter-value" data-target="252">000</span>
-          <span class="counter-sign">+</span>
-        </div>
-        <span class="counter-name">Successful Tours</span>
-      </div>
-    </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="gallery"> 
-      <h2>Contact Us</h2>
-    </div>
+      <div class="gallery">
+        <h2>Contact Us</h2>
+      </div>
       <form>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
@@ -203,11 +205,12 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2024 Explore Indonesia. All rights reserved.</p>
+      <a href="https://olenaportfolio.netlify.app/" target="_blank">
+        <p>&copy; 2024 Olena Boichenko. All rights reserved.</p></a
+      >
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
 
     <script src="/script.js"></script>
   </body>

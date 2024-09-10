@@ -9,6 +9,8 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
+
 header {
   background-image: url("images/page.png");
   background-size: cover;
@@ -24,11 +26,12 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .header-title h1 {
   font-size: 60px;
-  letter-spacing: 10px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
 }
@@ -55,8 +58,76 @@ nav {
   align-items: center;
   row-gap: 15px;
   column-gap: 15px;
-  padding: 40px 0 0 40px;
+  padding: 50px 0 0 40px;
 }
+
+/* Burger menu */
+
+.open {
+  display: flex !important;
+}
+
+.close {
+  display: none !important;
+}
+
+.container_burger {
+  display: none;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.burger {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  width: 30px;
+  height: 18px;
+  z-index: 50;
+  margin: 2%;
+}
+
+.burger span {
+  height: 2px;
+  width: 80%;
+  transform: scale(1);
+  background-color: #ffffff;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  bottom: 0;
+}
+
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger.active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
+}
+
+/* About Section */
 
 #about {
   background-image: url("/images/about.jpg");
@@ -69,18 +140,18 @@ nav {
 }
 
 .about {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .about p {
-    color: #fff;
-    font-size: 20px;
+  color: #ffffff;
+  font-size: 20px;
 }
 
-
+/*Destinations Section*/
 
 #destinations {
   width: 100%;
@@ -89,7 +160,7 @@ nav {
     url("/images/destination.png") center/cover;
 }
 
-#destinations h2, 
+#destinations h2,
 #about h2 {
   font-size: 50px;
   text-align: center;
@@ -124,6 +195,8 @@ nav {
   color: #fff;
 }
 
+/*Slider container*/
+
 .gallery {
   font-size: 35px;
   text-align: center;
@@ -148,6 +221,8 @@ nav {
   display: block;
   width: 100%;
 }
+
+/*Numbers Section*/
 
 .block {
   background-color: #020c21;
@@ -180,11 +255,6 @@ nav {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   transition: 0.3s all ease-out;
 }
-/* 
-.counter-card:hover {
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
-  transform: scale(1.01);
-} */
 
 .counter-icon {
   font-size: 35px;
@@ -218,33 +288,7 @@ nav {
   line-height: 1.2;
 }
 
-/* #destinations:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: ;
-} */
-
-/* #destinations h2 {
-    z-index: 10;
-    color: #fff;
-} */
-
-footer {
-  background: #9d8386;
-  color: #fff;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 20px;
-}
-
-.gallery-item img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-}
+/*Contact Section*/
 
 form {
   display: flex;
@@ -272,6 +316,21 @@ form button {
 
 form button:hover {
   background-color: #724e3c;
+}
+
+/*Footer*/
+
+footer {
+  background: #9d8386;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000;
 }
 
 @media screen and (max-width: 1024px) {
@@ -303,9 +362,59 @@ form button:hover {
     height: 30vmin;
     font-size: 14px;
   }
+
+  .container_burger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    row-gap: 20px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    right: 0;
+    padding: 50px 40px;
+    background-color: #00bdd5;
+    animation: burgerAnimation 0.4s;
+    z-index: 10;
+  }
+
+  @keyframes burgerAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .header-title h1 {
+    font-size: 30px;
+    letter-spacing: normal;
+  }
+
+  #about h2 {
+    font-size: 35px;
+  }
+
+  .about p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    padding: 10px;
+  }
+
   .counter-container {
     grid-template-columns: repeat(1, 240px);
     height: 100vh;
@@ -314,6 +423,17 @@ form button:hover {
 
   .block h2 {
     padding-top: 4rem;
+  }
+
+  .about {
+    transform: none;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 10px;
   }
 }
 
@@ -325,5 +445,31 @@ form button:hover {
     width: 100%;
     height: 25vmin;
     font-size: 8px;
+  }
+
+  #destinations h2,
+  #about h2 {
+    font-size: 30px;
+  }
+
+  .about p {
+    font-size: 15px;
+  }
+
+  .destination img {
+    width: 340px;
+    padding-bottom: 10px;
+  }
+
+  .destination h3 {
+    font-size: 20px;
+  }
+
+  .destination p {
+    font-size: 15px;
+  }
+
+  .gallery {
+    font-size: 25px;
   }
 }
